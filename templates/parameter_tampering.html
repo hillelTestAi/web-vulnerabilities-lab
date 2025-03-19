@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תרגול Parameter Tampering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <h2>תרגול Parameter Tampering</h2>
+    <p>נסה לשנות את המחיר לפני שליחת הטופס.</p>
+    <form method="POST" onsubmit="return validateParameterTampering()">
+        <label>מחיר: </label>
+        <input type="text" name="price" value="100">
+        <button type="submit">שלם</button>
+    </form>
+</body>
+</html>
