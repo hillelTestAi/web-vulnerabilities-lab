@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תרגול SQL Injection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <h2>תרגול SQL Injection</h2>
+    <p>נסה להזריק שאילתה בכניסה לשם המשתמש.</p>
+    <form method="POST" onsubmit="return validateSQLInput()">
+        <input type="text" name="username" placeholder="שם משתמש">
+        <button type="submit">בדיקה</button>
+    </form>
+</body>
+</html>
