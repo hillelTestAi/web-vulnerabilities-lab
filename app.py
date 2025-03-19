@@ -25,7 +25,7 @@ def xss():
 def parameter_tampering():
     if request.method == 'POST':
         price = request.form.get('price')
-        return f"המחיר ששילמת הוא: {price} ש"ח"
+        return f'המחיר ששילמת הוא: {price} ש"ח'
     return render_template('parameter_tampering.html')
 
 if __name__ == '__main__':
